@@ -56,9 +56,9 @@
   --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 
   /* Transitions */
-  --transition-fast: 150ms ease;
-  --transition: 300ms ease;
-  --transition-slow: 500ms ease;
+  --transition-fast: 100ms ease-out; 
+  --transition: 200ms ease-out;
+  --transition-slow: 350ms ease-out;
 }
 
 * {
@@ -100,7 +100,7 @@ body::before {
     radial-gradient(circle at 20% 80%, rgba(56, 189, 248, 0.1) 0%, transparent 50%),
     radial-gradient(circle at 80% 20%, rgba(56, 189, 248, 0.08) 0%, transparent 50%),
     radial-gradient(circle at 40% 40%, rgba(56, 189, 248, 0.05) 0%, transparent 50%);
-  animation: backgroundShift 25s ease-in-out infinite;
+  animation: backgroundShift 15s ease-in-out infinite; /* De 25s para 15s */
   z-index: -2;
 }
 
@@ -120,7 +120,7 @@ body::after {
     radial-gradient(2px 2px at 160px 30px, rgba(56, 189, 248, 0.2), transparent);
   background-repeat: repeat;
   background-size: 200px 200px;
-  animation: particleFloat 20s linear infinite;
+  animation: particleFloat 12s linear infinite;
   z-index: -1;
 }
 
@@ -393,6 +393,13 @@ li {
   border-radius: var(--radius-lg);
   padding: var(--space-xl);
   backdrop-filter: blur(10px);
+  transition: all var(--transition) ease; /* Garante transição suave */
+}
+
+.hero-card:hover {
+  background: var(--glass-hover);
+  transform: translateY(-4px); /* Aumentado de -2px implícito para -4px */
+  box-shadow: var(--shadow-lg); /* Aumentado de shadow-md implícito para shadow-lg */
 }
 
 .hero-card h3 {
@@ -438,11 +445,13 @@ li {
   font-weight: 500;
   transition: all var(--transition-fast);
   cursor: default;
+  position: relative;
+  overflow: hidden; 
 }
 
 .skill:hover {
   background: var(--glass-hover);
-  transform: translateY(-2px);
+  transform: translateY(-3px); 
   box-shadow: var(--shadow-md);
 }
 
@@ -500,8 +509,8 @@ li {
 
 .project-card:hover {
   background: var(--glass-hover);
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
+  transform: translateY(-6px); 
+  box-shadow: var(--shadow-xl); 
 }
 
 .project-card:hover::before {
@@ -559,8 +568,8 @@ li {
 
 .card:hover {
   background: var(--glass-hover);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
 }
 
 /* Contact Section */
@@ -637,10 +646,10 @@ li {
 /* Enhanced Animations */
 .reveal {
   opacity: 0;
-  transform: translateY(60px) scale(0.95);
+  transform: translateY(40px) scale(0.98); 
   transition:
-    opacity var(--transition-slow),
-    transform var(--transition-slow);
+    opacity var(--transition), 
+    transform var(--transition); 
 }
 
 .reveal.visible {
@@ -650,10 +659,10 @@ li {
 
 /* Staggered animations for different elements */
 .reveal:nth-child(1) { transition-delay: 0ms; }
-.reveal:nth-child(2) { transition-delay: 100ms; }
-.reveal:nth-child(3) { transition-delay: 200ms; }
-.reveal:nth-child(4) { transition-delay: 300ms; }
-.reveal:nth-child(5) { transition-delay: 400ms; }
+.reveal:nth-child(2) { transition-delay: 50ms; }
+.reveal:nth-child(3) { transition-delay: 100ms; }
+.reveal:nth-child(4) { transition-delay: 150ms; }
+.reveal:nth-child(5) { transition-delay: 200ms; } 
 
 /* Card hover animations */
 .card, .project-card, .hero-card {
@@ -670,7 +679,7 @@ li {
   width: 100%;
   height: 100%;
   background: linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.1), transparent);
-  transition: left var(--transition-slow);
+  transition: left var(--transition); /* De --transition-slow para --transition */
 }
 
 .card:hover::before, .project-card:hover::before, .hero-card:hover::before {
@@ -691,7 +700,7 @@ li {
   width: 0;
   height: 100%;
   background: linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.2), transparent);
-  transition: width var(--transition-slow);
+  transition: width var(--transition); /* De --transition-slow para --transition */
 }
 
 .skill:hover::after {
@@ -744,7 +753,7 @@ li {
   background: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   transform: translate(-50%, -50%);
-  transition: width var(--transition), height var(--transition);
+  transition: width var(--transition-fast), height var(--transition-fast); /* Usando --transition-fast */
 }
 
 .btn:hover::before, .btn-outline:hover::before {
