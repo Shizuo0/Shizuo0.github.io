@@ -1,0 +1,20 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+
+# Custom for Visual Studio
+*.cs     diff=csharp
+*.sln    merge=union
+*.suo    binary
+*.user   binary
+*.useros binary
+*.cache  binary
+
+# Custom for Windows
+*.bat    text eol=crlf
+*.cmd    text eol=crlf
+
+# Custom for Unix
+*.sh     text eol=lf
+
+# Custom for Mac
+*.pbxproj text
