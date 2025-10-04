@@ -3,7 +3,7 @@ import { useTranslation } from '../contexts/TranslationContext';
 import TranslationIcon from './TranslationIcon';
 
 const LanguageSelector: React.FC = () => {
-  const { language, toggleLanguage, t } = useTranslation();
+  const { language, toggleLanguage } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 

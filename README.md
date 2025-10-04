@@ -1,49 +1,49 @@
-# Paulo Shizuo - Portfólio
+# Paulo Shizuo - Portfolio
 
-Portfólio pessoal moderno desenvolvido com React, TypeScript e Vite, seguindo as melhores práticas de desenvolvimento web.
+Portfolio developed with React, TypeScript and Vite, following web development best practices.
 
-## 🚀 Tecnologias
+## 🚀 Technologies
 
-- **React 19** - Biblioteca para interfaces de usuário
-- **TypeScript** - Tipagem estática para JavaScript
-- **Vite** - Build tool moderno e rápido
-- **CSS Modules** - Estilos modulares e reutilizáveis
-- **ESLint** - Linting de código
-- **Intersection Observer API** - Animações de scroll
+- **React 19** - User interface library
+- **TypeScript** - Static typing for JavaScript
+- **Vite** - Modern and fast build tool
+- **CSS Modules** - Modular and reusable styles
+- **ESLint** - Code linting
+- **Intersection Observer API** - Scroll animations
 
-## ✨ Características
+## ✨ Features
 
-- 🎨 **Design Moderno** - Interface limpa e responsiva
-- ⚡ **Performance Otimizada** - Carregamento rápido e eficiente
-- 📱 **Responsivo** - Funciona perfeitamente em todos os dispositivos
-- ♿ **Acessível** - Seguindo padrões de acessibilidade web
-- 🔍 **SEO Otimizado** - Meta tags e estrutura otimizada para buscadores
-- 🎭 **Animações Suaves** - Transições e efeitos visuais elegantes
+- 🎨 **Modern Design** - Clean and responsive interface
+- ⚡ **Optimized Performance** - Fast and efficient loading
+- 📱 **Responsive** - Works perfectly on all devices
+- ♿ **Accessible** - Following web accessibility standards
+- 🔍 **SEO Optimized** - Meta tags and structure optimized for search engines
+- 🎭 **Smooth Animations** - Elegant transitions and visual effects
 
-## 🛠️ Scripts Disponíveis
+## 🛠️ Available Scripts
 
 ```bash
-# Instalar dependências
+# Install dependencies
 npm install
 
-# Executar em modo de desenvolvimento
+# Run in development mode
 npm run dev
 
-# Build para produção
+# Build for production
 npm run build
 
-# Preview do build de produção
+# Preview production build
 npm run preview
 
-# Executar linting
+# Run linting
 npm run lint
 ```
 
-## 📁 Estrutura do Projeto
+## 📁 Project Structure
 
 ```
 src/
-├── components/          # Componentes React reutilizáveis
+├── components/          # Reusable React components
 │   ├── Header.tsx
 │   ├── Hero.tsx
 │   ├── Skills.tsx
@@ -51,135 +51,135 @@ src/
 │   ├── Education.tsx
 │   ├── Contact.tsx
 │   └── Footer.tsx
-├── hooks/              # Hooks personalizados
+├── hooks/              # Custom hooks
 │   ├── useIntersectionObserver.ts
 │   └── useContactForm.ts
-├── types/              # Definições de tipos TypeScript
+├── types/              # TypeScript type definitions
 │   └── index.ts
-├── utils/              # Funções utilitárias
-├── App.tsx             # Componente principal
-├── main.tsx            # Ponto de entrada
-└── index.css           # Estilos globais
+├── utils/              # Utility functions
+├── App.tsx             # Main component
+├── main.tsx            # Entry point
+└── index.css           # Global styles
 ```
 
-## 🎯 Funcionalidades
+## 🎯 Features
 
-### Seções do Portfólio
+### Portfolio Sections
 
-- **Header** - Navegação principal com links suaves
-- **Hero** - Apresentação pessoal e resumo profissional
-- **Skills** - Grid de habilidades com categorização visual
-- **Projects** - Cards de projetos com tecnologias e links
-- **Education** - Formação acadêmica
-- **Contact** - Formulário de contato funcional
+- **Header** - Main navigation with smooth links
+- **Hero** - Personal presentation and professional summary
+- **Skills** - Skills grid with visual categorization
+- **Projects** - Project cards with technologies and links
+- **Education** - Academic background
+- **Contact** - Functional contact form
 
-### Recursos Técnicos
+### Technical Resources
 
-- **Intersection Observer** - Animações de scroll automáticas
-- **Formulário de Contato** - Integração com cliente de email
+- **Intersection Observer** - Automatic scroll animations
+- **Contact Form** - Email client integration
 - **Responsive Design** - Mobile-first approach
-- **CSS Variables** - Sistema de design consistente
-- **TypeScript** - Tipagem forte para melhor manutenibilidade
+- **CSS Variables** - Consistent design system
+- **TypeScript** - Strong typing for better maintainability
 
 ## 🚀 Deploy
 
-O projeto está configurado para deploy em plataformas como Vercel, Netlify ou GitHub Pages.
+The project is configured for deployment on platforms like Vercel, Netlify or GitHub Pages.
 
-### Vercel (Recomendado)
+### Vercel (Recommended)
 
 ```bash
 npm run build
-# Faça upload da pasta dist/ para o Vercel
+# Upload the dist/ folder to Vercel
 ```
 
 ### GitHub Pages
 
 ```bash
 npm run build
-# Configure o GitHub Actions para deploy automático
+# Configure GitHub Actions for automatic deployment
 ```
 
-## 📝 Licença
+## 📝 License
 
-Este projeto é de uso pessoal e educacional.
+This project is for personal and educational use.
 
-## 🤖 Colaboração com IA
+## 🤖 AI Collaboration
 
-Este projeto foi desenvolvido em colaboração com inteligência artificial, demonstrando como as ferramentas de IA podem acelerar e melhorar o desenvolvimento de software moderno.
+This project was developed in collaboration with artificial intelligence, demonstrating how AI tools can accelerate and improve modern software development.
 
-### 🛠️ Ferramentas de IA Utilizadas
+### 🛠️ AI Tools Used
 
-- **Claude (Anthropic)** - Assistente principal para desenvolvimento
-- **Cursor AI** - Editor de código com IA integrada
-- **GitHub Copilot** - Sugestões de código em tempo real
+- **Claude (Anthropic)** - Main development assistant
+- **Cursor AI** - Code editor with integrated AI
+- **GitHub Copilot** - Real-time code suggestions
 
-### 📋 Partes do Projeto Desenvolvidas com IA
+### 📋 Project Parts Developed with AI
 
-#### **1. Refatoração da Arquitetura**
-- Separação em componentes modulares
-- Criação de hooks personalizados (`useIntersectionObserver`, `useContactForm`)
-- Implementação de sistema de tipos centralizado
-- Organização da estrutura de pastas
+#### **1. Architecture Refactoring**
+- Separation into modular components
+- Creation of custom hooks (`useIntersectionObserver`, `useContactForm`)
+- Implementation of centralized type system
+- Project folder structure organization
 
-#### **2. Otimização de Performance**
-- Configuração do Vite com otimizações de build
-- Implementação de code splitting
-- Configuração de ESLint com regras modernas
-- Otimização de CSS com variáveis customizadas
+#### **2. Performance Optimization**
+- Vite configuration with build optimizations
+- Code splitting implementation
+- ESLint configuration with modern rules
+- CSS optimization with custom variables
 
-#### **3. Design e UX**
-- Criação de logos SVG personalizadas
-- Implementação de animações com Intersection Observer
-- Design responsivo mobile-first
-- Sistema de cores e tipografia consistente
+#### **3. Design and UX**
+- Custom SVG logo creation
+- Animation implementation with Intersection Observer
+- Mobile-first responsive design
+- Consistent color and typography system
 
-#### **4. SEO e Acessibilidade**
-- Meta tags otimizadas para buscadores
-- Implementação de ARIA labels
-- Estrutura semântica HTML
-- Open Graph e Twitter Cards
+#### **4. SEO and Accessibility**
+- Search engine optimized meta tags
+- ARIA labels implementation
+- Semantic HTML structure
+- Open Graph and Twitter Cards
 
-### 🎓 O que Aprendi com essa Interação
+### 🎓 What I Learned from this Interaction
 
-#### **Desenvolvimento Ágil**
-- Como a IA pode acelerar significativamente o desenvolvimento
-- Importância de prompts específicos e detalhados
-- Iteração rápida entre ideia e implementação
-- Validação contínua de código e configurações
+#### **Agile Development**
+- How AI can significantly accelerate development
+- Importance of specific and detailed prompts
+- Rapid iteration between idea and implementation
+- Continuous code and configuration validation
 
-#### **Boas Práticas Modernas**
-- Padrões de código TypeScript mais rigorosos
-- Configuração adequada de ferramentas de desenvolvimento
-- Estrutura de projeto escalável e manutenível
-- Integração de múltiplas ferramentas de IA
+#### **Modern Best Practices**
+- More rigorous TypeScript code patterns
+- Proper development tools configuration
+- Scalable and maintainable project structure
+- Integration of multiple AI tools
 
-#### **Colaboração Humano-IA**
-- Como dividir responsabilidades entre humano e IA
-- Importância da revisão e validação humana
-- Aproveitamento das forças de cada ferramenta
-- Manutenção do controle criativo e arquitetural
+#### **Human-AI Collaboration**
+- How to divide responsibilities between human and AI
+- Importance of human review and validation
+- Leveraging the strengths of each tool
+- Maintaining creative and architectural control
 
-#### **Ferramentas e Workflow**
-- Configuração eficiente de ambientes de desenvolvimento
-- Integração de linting, formatação e type checking
-- Versionamento e organização de código
-- Documentação técnica e guias de uso
+#### **Tools and Workflow**
+- Efficient development environment setup
+- Integration of linting, formatting and type checking
+- Code versioning and organization
+- Technical documentation and usage guides
 
-### 💡 Insights sobre IA no Desenvolvimento
+### 💡 Insights on AI in Development
 
-- **Aceleração**: Redução de ~70% no tempo de desenvolvimento
-- **Qualidade**: Código mais consistente e seguindo padrões
-- **Aprendizado**: Exposição a padrões e práticas modernas
-- **Produtividade**: Foco em lógica de negócio vs. boilerplate
-- **Inovação**: Experimentação rápida com novas tecnologias
+- **Acceleration**: ~70% reduction in development time
+- **Quality**: More consistent code following standards
+- **Learning**: Exposure to modern patterns and practices
+- **Productivity**: Focus on business logic vs. boilerplate
+- **Innovation**: Rapid experimentation with new technologies
 
-### 🔮 Futuro da Colaboração IA-Desenvolvedor
+### 🔮 Future of AI-Developer Collaboration
 
-Esta experiência demonstra o potencial da colaboração entre desenvolvedores e IA para criar software de alta qualidade de forma mais eficiente, mantendo o controle humano sobre decisões arquiteturais e criativas.
+This experience demonstrates the potential of collaboration between developers and AI to create high-quality software more efficiently, while maintaining human control over architectural and creative decisions.
 
 ---
 
-## 👨‍💻 Autor
+## 👨‍💻 Author
 
 **Paulo Shizuo Vasconcelos Tatibana**
 
@@ -189,4 +189,4 @@ Esta experiência demonstra o potencial da colaboração entre desenvolvedores e
 
 ---
 
-Desenvolvido usando React + TypeScript + Vite + IA
+Developed using React + TypeScript + Vite + AI
