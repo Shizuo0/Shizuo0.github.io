@@ -71,6 +71,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-padding-top: calc(var(--header-height));
+}
+
 body {
   margin: 0;
   background: linear-gradient(180deg, var(--bg), #06070a);
@@ -199,8 +203,10 @@ h6 {
   font-size: var(--font-size-base);
 }
 
-section[id] {
-  scroll-margin-top: 100px;
+section[id],
+h2[id],
+h3[id] {
+  scroll-margin-top: calc(var(--header-height));
 }
 
 p {
@@ -238,6 +244,7 @@ li {
   z-index: 100;
   transition: all var(--transition);
   width: 100%;
+  height: var(--header-height); /* ← GARANTIR ALTURA CONSISTENTE */
 }
 
 .header-inner {
@@ -250,6 +257,7 @@ li {
   margin: 0 auto;
   padding-left: var(--space-xl);
   padding-right: var(--space-xl);
+  height: 100%; /* ← GARANTIR QUE OCUPE TODA A ALTURA */
 }
 
 .brand h1 {
