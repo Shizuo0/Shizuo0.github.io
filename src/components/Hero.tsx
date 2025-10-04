@@ -14,22 +14,6 @@ const Hero: React.FC = () => {
         oportunidades para crescer como desenvolvedor e contribuir em
         projetos inovadores.
         </p>
-        <p className="contact-quick">
-          <strong>Email:</strong>{' '}
-          <a href="mailto:paulosvtatibana@gmail.com" aria-label="Enviar email para Paulo">
-            paulosvtatibana@gmail.com
-          </a>
-          &nbsp;•&nbsp;
-          <strong>GitHub:</strong>{' '}
-          <a
-            href="https://github.com/Shizuo0"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Abrir perfil do GitHub em nova aba"
-          >
-            github.com/Shizuo0
-          </a>
-        </p>
       </div>
       <div className="hero-card">
         <h3>Resumo rápido</h3>
