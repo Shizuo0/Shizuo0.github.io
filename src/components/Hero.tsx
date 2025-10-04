@@ -1,26 +1,25 @@
 import React from 'react';
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
+import { useTranslation } from '../contexts/TranslationContext';
 
 const Hero: React.FC = () => {
   const ref = useIntersectionObserver();
+  const { t } = useTranslation();
 
   return (
     <section id="sobre" className="hero container reveal" ref={ref}>
       <div className="hero-content">
-        <h2>Estudante de Ciências da Computação</h2>
+        <h2>{t('hero.title')}</h2>
         <p>
-        Estudante de Ciências da Computação, com experiência prática em
-        desenvolvimento de APIs, web e aplicações mobile. Busco
-        oportunidades para crescer como desenvolvedor e contribuir em
-        projetos inovadores.
+          {t('hero.description')}
         </p>
       </div>
       <div className="hero-card">
-        <h3>Resumo rápido</h3>
+        <h3>{t('hero.summary.title')}</h3>
         <ul>
-          <li>Desenvolvimento Web e mobile (TypeScript, React, Ruby on Rails)</li>
-          <li>Programação orientada a objetos, bancos (Postgres, MySQL)</li>
-          <li>Docker, Git/GitHub, testes com cobertura</li>
+          <li>{t('hero.summary.item1')}</li>
+          <li>{t('hero.summary.item2')}</li>
+          <li>{t('hero.summary.item3')}</li>
         </ul>
       </div>
     </section>

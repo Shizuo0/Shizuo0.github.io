@@ -1,20 +1,26 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
 import { useContactForm } from '../hooks/useContactForm';
+import { useTranslation } from '../contexts/TranslationContext';
 
 const Contact: React.FC = () => {
   const ref = useIntersectionObserver();
-  const { formData, copyButtonText, handleInputChange, handleSubmit, handleCopyEmail } =
+  const { t, language } = useTranslation();
+  const { formData, copyButtonText, handleInputChange, handleSubmit, handleCopyEmail, updateCopyButtonText } =
     useContactForm();
+
+  useEffect(() => {
+    updateCopyButtonText(t('contact.copy'));
+  }, [language, t, updateCopyButtonText]);
 
   return (
     <section id="contato" className="container contact-section reveal" ref={ref}>
-      <h2>Contato</h2>
-      <p>Quer conversar sobre vagas, projetos ou café virtual? Manda mensagem aqui:</p>
+      <h2>{t('contact.title')}</h2>
+      <p>{t('contact.description')}</p>
 
       <form onSubmit={handleSubmit} className="contact-form" noValidate>
         <label htmlFor="name">
-          Nome
+          {t('contact.name')}
           <input
             id="name"
             type="text"
@@ -27,7 +33,7 @@ const Contact: React.FC = () => {
         </label>
 
         <label htmlFor="subject">
-          Assunto
+          {t('contact.subject')}
           <input
             id="subject"
             type="text"
@@ -39,7 +45,7 @@ const Contact: React.FC = () => {
         </label>
 
         <label htmlFor="message">
-          Mensagem
+          {t('contact.message')}
           <textarea
             id="message"
             name="message"
@@ -53,7 +59,7 @@ const Contact: React.FC = () => {
 
         <div className="form-actions">
           <button type="submit" className="btn">
-            Enviar por email
+            {t('contact.send')}
           </button>
           <button
             type="button"

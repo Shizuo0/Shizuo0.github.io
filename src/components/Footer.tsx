@@ -1,8 +1,11 @@
 import React, { useEffect } from 'react';
+import { useTranslation } from '../contexts/TranslationContext';
 import GitHubIcon from './GitHubIcon';
 import LinkedInIcon from './LinkedInIcon';
 
 const Footer: React.FC = () => {
+  const { t } = useTranslation();
+
   useEffect(() => {
     const yearElement = document.getElementById('year');
     if (yearElement) {
@@ -14,11 +17,11 @@ const Footer: React.FC = () => {
     <footer className="site-footer">
       <div className="container footer-inner">
         <div>
-          © <span id="year"></span> Paulo Shizuo Vasconcelos Tatibana
+          {t('footer.copyright', { year: new Date().getFullYear() })}
         </div>
         <div className="footer-right">
           <div className="footer-social-links">
-            <span className="footer-social-text">Redes Sociais: </span>
+            <span className="footer-social-text">{t('footer.social')}</span>
             
             <a
               href="https://github.com/Shizuo0"

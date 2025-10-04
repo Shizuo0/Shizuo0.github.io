@@ -6,12 +6,13 @@ import Education from './components/Education';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import { useScrollEffects } from './hooks/useScrollEffects';
+import { TranslationProvider } from './contexts/TranslationContext';
 
 function App() {
   useScrollEffects();
 
   return (
-    <>
+    <TranslationProvider>
       <Header />
       <main>
         <Hero />
@@ -21,7 +22,7 @@ function App() {
         <Contact />
       </main>
       <Footer />
-    </>
+    </TranslationProvider>
   );
 }
 

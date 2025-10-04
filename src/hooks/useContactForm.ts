@@ -46,11 +46,16 @@ export const useContactForm = () => {
     }
   };
 
+  const updateCopyButtonText = (text: string) => {
+    setCopyButtonText(text);
+  };
+
   return {
     formData,
     copyButtonText,
     handleInputChange,
     handleSubmit,
     handleCopyEmail,
+    updateCopyButtonText,
   };
 };

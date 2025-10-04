@@ -1,9 +1,11 @@
 import React from 'react';
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
+import { useTranslation } from '../contexts/TranslationContext';
 import { Skill } from '../types';
 
 const Skills: React.FC = () => {
   const ref = useIntersectionObserver();
+  const { t } = useTranslation();
 
   const skills: Skill[] = [
     { name: 'Java', category: 'backend' },
@@ -20,7 +22,7 @@ const Skills: React.FC = () => {
 
   return (
     <section id="skills" className="container reveal" ref={ref}>
-      <h2>Habilidades</h2>
+      <h2>{t('skills.title')}</h2>
       <div className="skills-grid">
         {skills.map((skill, index) => (
           <div
