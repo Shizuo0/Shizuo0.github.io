@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
+  <defs>
+    <linearGradient id="githubGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#87ceeb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00bfff;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle - similar to GitHub's design -->
+  <circle cx="150" cy="150" r="150" fill="url(#githubGradient)"/>
+  
+  <!-- Inner circle for depth -->
+  <circle cx="150" cy="150" r="130" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2"/>
+  
+  <!-- Letter P - GitHub style, centered and bold -->
+  <path d="M120 80 L120 220 L160 220 L160 180 L200 180 C230 180 250 160 250 130 C250 100 230 80 200 80 L120 80 Z M160 110 L200 110 C210 110 220 120 220 130 C220 140 210 150 200 150 L160 150 Z" 
+        fill="white" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+  
+  <!-- Subtle highlight on top -->
+  <path d="M120 80 L120 100 L160 100 L160 80 Z" fill="rgba(255,255,255,0.3)"/>
+  
+  <!-- Inner highlight for the P -->
+  <path d="M160 110 L200 110 C210 110 220 120 220 130 C220 140 210 150 200 150 L160 150 Z" 
+        fill="rgba(255,255,255,0.1)"/>
+</svg>
