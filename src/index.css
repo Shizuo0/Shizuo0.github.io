@@ -92,15 +92,15 @@ body {
 body::before {
   content: '';
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: -10%;
+  left: -10%;
+  width: 120%;
+  height: 120%;
   background: 
     radial-gradient(circle at 20% 80%, rgba(56, 189, 248, 0.1) 0%, transparent 50%),
     radial-gradient(circle at 80% 20%, rgba(56, 189, 248, 0.08) 0%, transparent 50%),
     radial-gradient(circle at 40% 40%, rgba(56, 189, 248, 0.05) 0%, transparent 50%);
-  animation: backgroundShift 20s ease-in-out infinite;
+  animation: backgroundShift 25s ease-in-out infinite;
   z-index: -2;
 }
 
@@ -120,7 +120,7 @@ body::after {
     radial-gradient(2px 2px at 160px 30px, rgba(56, 189, 248, 0.2), transparent);
   background-repeat: repeat;
   background-size: 200px 200px;
-  animation: particleFloat 15s linear infinite;
+  animation: particleFloat 20s linear infinite;
   z-index: -1;
 }
 
@@ -129,13 +129,13 @@ body::after {
     transform: translateX(0) translateY(0) scale(1);
   }
   25% {
-    transform: translateX(-20px) translateY(-10px) scale(1.05);
+    transform: translateX(-8px) translateY(-5px) scale(1.02);
   }
   50% {
-    transform: translateX(10px) translateY(-20px) scale(0.95);
+    transform: translateX(5px) translateY(-8px) scale(0.98);
   }
   75% {
-    transform: translateX(-10px) translateY(10px) scale(1.02);
+    transform: translateX(-5px) translateY(3px) scale(1.01);
   }
 }
 
@@ -144,13 +144,13 @@ body::after {
     transform: translateY(0px) translateX(0px);
   }
   25% {
-    transform: translateY(-20px) translateX(10px);
+    transform: translateY(-8px) translateX(4px);
   }
   50% {
-    transform: translateY(-10px) translateX(-15px);
+    transform: translateY(-4px) translateX(-6px);
   }
   75% {
-    transform: translateY(-30px) translateX(5px);
+    transform: translateY(-12px) translateX(2px);
   }
   100% {
     transform: translateY(0px) translateX(0px);
@@ -244,7 +244,7 @@ li {
   z-index: 100;
   transition: all var(--transition);
   width: 100%;
-  height: var(--header-height); /* ← GARANTIR ALTURA CONSISTENTE */
+  height: var(--header-height);
 }
 
 .header-inner {
@@ -257,7 +257,7 @@ li {
   margin: 0 auto;
   padding-left: var(--space-xl);
   padding-right: var(--space-xl);
-  height: 100%; /* ← GARANTIR QUE OCUPE TODA A ALTURA */
+  height: 100%;
 }
 
 .brand h1 {
