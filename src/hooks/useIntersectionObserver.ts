@@ -18,6 +18,9 @@ export const useIntersectionObserver = (threshold = 0.1, rootMargin = '0px') => 
             setTimeout(() => {
               entry.target.classList.add('visible');
             }, delay);
+          } else {
+            // Remove the visible class when element leaves viewport
+            entry.target.classList.remove('visible');
           }
         });
       },

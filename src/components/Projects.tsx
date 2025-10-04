@@ -49,7 +49,6 @@ const Projects: React.FC = () => {
                 </span>
               ))}
             </div>
-            )
           </article>
         ))}
       </div>

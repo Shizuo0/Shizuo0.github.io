@@ -38,7 +38,6 @@ const translations: Translations = {
     'projects.game.description': 'Jogo 2D em Godot Engine – foco em narrativa interativa. Programei um ESP-32 para servir como controle para o jogo.',
     'projects.mobile.title': 'App Mobile — Academia (Kotlin)',
     'projects.mobile.description': 'Aplicativo mobile em Kotlin – app para academia universitária com cadastro de treinos e notificações.',
-    'projects.github.link': 'Ver no GitHub',
 
     // Education
     'education.title': 'Formação',
@@ -89,7 +88,6 @@ const translations: Translations = {
     'projects.game.description': '2D game in Godot Engine – focused on interactive narrative. Programmed an ESP-32 to serve as a game controller.',
     'projects.mobile.title': 'Mobile App — Gym (Kotlin)',
     'projects.mobile.description': 'Mobile application in Kotlin – university gym app with workout registration and notifications.',
-    'projects.github.link': 'View on GitHub',
 
     // Education
     'education.title': 'Education',
