@@ -22,12 +22,12 @@ const Skills: React.FC = () => {
 
   return (
     <section id="skills" className="container reveal" ref={ref}>
-      <h2>{t('skills.title')}</h2>
+      <h2 className="animate-fadeInDown hover-glow">{t('skills.title')}</h2>
       <div className="skills-grid">
         {skills.map((skill, index) => (
           <div
             key={index}
-            className={`skill skill-${skill.category}`}
+            className={`skill skill-${skill.category} hover-lift hover-glow animate-zoomIn delay-${(index % 5) * 100}`}
             data-category={skill.category}
           >
             {skill.name}
