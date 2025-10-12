@@ -13,7 +13,7 @@ const translations: Translations = {
     'header.title': 'Paulo Shizuo Vasconcelos Tatibana',
     'header.subtitle': 'Cientista da Computação • Developer',
     'nav.about': 'Sobre',
-    'nav.skills': 'Skills',
+    'nav.skills': 'Habilidades',
     'nav.projects': 'Projetos',
     'nav.contact': 'Contato',
     'nav.translate': 'English',

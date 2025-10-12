@@ -1,25 +1,52 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="githubGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#87ceeb;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#00bfff;stop-opacity:1" />
+    <!-- Gradiente neon -->
+    <linearGradient id="neonGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#80E8FF"/>
+      <stop offset="100%" stop-color="#8B00FF"/>
     </linearGradient>
+
+    <!-- Brilho do fundo -->
+    <radialGradient id="softGlow" cx="50%" cy="50%" r="65%">
+      <stop offset="0%" stop-color="#222" />
+      <stop offset="100%" stop-color="#0d002eff" />
+    </radialGradient>
+
+    <!-- Efeito glow -->
+    <filter id="neonGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Animação de pulsar -->
+    <style>
+      @keyframes pulse {
+        0%, 100% { filter: drop-shadow(0 0 10px #80E8FF) drop-shadow(0 0 20px #8B00FF); }
+        50% { filter: drop-shadow(0 0 25px #80E8FF) drop-shadow(0 0 45px #8B00FF); }
+      }
+
+      .neonText {
+        animation: pulse 2.5s infinite ease-in-out;
+      }
+    </style>
   </defs>
-  
-  <!-- Background circle - similar to GitHub's design -->
-  <circle cx="150" cy="150" r="150" fill="url(#githubGradient)"/>
-  
-  <!-- Inner circle for depth -->
-  <circle cx="150" cy="150" r="130" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2"/>
-  
-  <!-- Letter P - GitHub style, centered and bold -->
-  <path d="M120 80 L120 220 L160 220 L160 180 L200 180 C230 180 250 160 250 130 C250 100 230 80 200 80 L120 80 Z M160 110 L200 110 C210 110 220 120 220 130 C220 140 210 150 200 150 L160 150 Z" 
-        fill="white" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
-  
-  <!-- Subtle highlight on top -->
-  <path d="M120 80 L120 100 L160 100 L160 80 Z" fill="rgba(255,255,255,0.3)"/>
-  
-  <!-- Inner highlight for the P -->
-  <path d="M160 110 L200 110 C210 110 220 120 220 130 C220 140 210 150 200 150 L160 150 Z" 
-        fill="rgba(255,255,255,0.1)"/>
+
+  <!-- Fundo -->
+  <rect x="32" y="32" width="448" height="448" rx="96" fill="url(#softGlow)"/>
+
+  <!-- Texto principal -->
+  <text x="85" y="370"
+        font-family="Arial, Helvetica, sans-serif"
+        font-weight="900"
+        font-size="300"
+        fill="url(#neonGradient)"
+        stroke="url(#neonGradient)"
+        stroke-width="6"
+        class="neonText"
+        filter="url(#neonGlow)">
+    Pf
+  </text>
 </svg>

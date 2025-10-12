@@ -27,7 +27,7 @@ const Skills: React.FC = () => {
         {skills.map((skill, index) => (
           <div
             key={index}
-            className={`skill skill-${skill.category}`}
+            className={`skill skill-${skill.category} animate-zoomIn delay-${(index % 5) * 100}`}
             data-category={skill.category}
           >
             {skill.name}

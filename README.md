@@ -7,18 +7,22 @@ Portfolio developed with React, TypeScript and Vite, following web development b
 - **React 19** - User interface library
 - **TypeScript** - Static typing for JavaScript
 - **Vite** - Modern and fast build tool
+- **Tailwind CSS 4.1** - Utility-first CSS framework
+- **PostCSS** - CSS processor for optimizations
 - **CSS Modules** - Modular and reusable styles
 - **ESLint** - Code linting
 - **Intersection Observer API** - Scroll animations
 
 ## ✨ Features
 
-- 🎨 **Modern Design** - Clean and responsive interface
-- ⚡ **Optimized Performance** - Fast and efficient loading
-- 📱 **Responsive** - Works perfectly on all devices
-- ♿ **Accessible** - Following web accessibility standards
+- 🎨 **Modern Design** - Clean interface with glassmorphism and neon effects
+- ⚡ **Optimized Performance** - Fast loading with optimized CSS
+- 📱 **Fully Responsive** - Adapted for mobile, tablet and desktop
+- ♿ **Accessible** - Following WCAG web accessibility standards
 - 🔍 **SEO Optimized** - Meta tags and structure optimized for search engines
-- 🎭 **Smooth Animations** - Elegant transitions and visual effects
+- 🎭 **Smooth Animations** - Elegant transitions with Intersection Observer
+- 🌐 **Multilingual** - Support for Portuguese and English
+- 🎨 **Design System** - Centralized CSS variables and consistent theme
 
 ## 🛠️ Available Scripts
 
@@ -44,22 +48,35 @@ npm run lint
 ```
 src/
 ├── components/          # Reusable React components
-│   ├── Header.tsx
-│   ├── Hero.tsx
-│   ├── Skills.tsx
-│   ├── Projects.tsx
-│   ├── Education.tsx
-│   ├── Contact.tsx
-│   └── Footer.tsx
+│   ├── Header.tsx      # Navigation with mobile menu
+│   ├── Hero.tsx        # Presentation section
+│   ├── Skills.tsx      # Skills grid
+│   ├── Projects.tsx    # Project cards
+│   ├── Education.tsx   # Academic background
+│   ├── Contact.tsx     # Contact form
+│   ├── Footer.tsx      # Footer with social links
+│   └── LanguageSelector.tsx # Language selector
+├── contexts/           # React Context API
+│   └── TranslationContext.tsx # Language management
 ├── hooks/              # Custom hooks
 │   ├── useIntersectionObserver.ts
 │   └── useContactForm.ts
+├── styles/             # Organized modular CSS
+│   ├── variables.css   # Design system variables
+│   ├── base.css        # Reset and global styles
+│   ├── header.css      # Header styles
+│   ├── hero.css        # Hero section styles
+│   ├── skills.css      # Skills styles
+│   ├── projects.css    # Projects styles
+│   ├── sections.css    # Sections styles
+│   ├── footer.css      # Footer styles
+│   └── language-selector.css # Selector styles
 ├── types/              # TypeScript type definitions
 │   └── index.ts
 ├── utils/              # Utility functions
 ├── App.tsx             # Main component
 ├── main.tsx            # Entry point
-└── index.css           # Global styles
+└── index.css           # Style imports
 ```
 
 ## 🎯 Features
@@ -75,17 +92,22 @@ src/
 
 ### Technical Resources
 
-- **Intersection Observer** - Automatic scroll animations
-- **Contact Form** - Email client integration
-- **Responsive Design** - Mobile-first approach
-- **CSS Variables** - Consistent design system
-- **TypeScript** - Strong typing for better maintainability
+- **Tailwind CSS 4.1** - Utility-first framework with custom classes
+- **Modular CSS** - 9 files organized by functionality (~2000 optimized lines)
+- **Design System** - Centralized CSS variables for colors, spacing and typography
+- **Intersection Observer** - Automatic and performant scroll animations
+- **Contact Form** - Email client integration (mailto)
+- **Responsive Design** - Mobile-first with breakpoints at 768px and 480px
+- **TypeScript Strict** - Strong typing for better maintainability
+- **Glassmorphism** - Glass effects with backdrop-filter
+- **CSS Animations** - Animated gradients and smooth transitions
+- **Multilingual** - Translation system with Context API
 
 ## 🚀 Deploy
 
 The project is configured for deployment on platforms like Vercel, Netlify or GitHub Pages.
 
-### Vercel (Recommended)
+### Vercel
 
 ```bash
 npm run build
@@ -122,16 +144,23 @@ This project was developed in collaboration with artificial intelligence, demons
 - Project folder structure organization
 
 #### **2. Performance Optimization**
+- CSS modularization from 3050 lines to 9 organized files
+- Removal of unused dependencies (GSAP)
 - Vite configuration with build optimizations
 - Code splitting implementation
 - ESLint configuration with modern rules
-- CSS optimization with custom variables
+- CSS optimization with custom variables and global animations
+- Code cleaning with ~7% reduction in total code
 
 #### **3. Design and UX**
-- Custom SVG logo creation
+- Custom SVG logos creation with gradients
 - Animation implementation with Intersection Observer
-- Mobile-first responsive design
-- Consistent color and typography system
+- Mobile-first responsive design with optimized media queries
+- Consistent color and typography system with CSS Variables
+- Glassmorphism and neon effects for modern look
+- Mobile menu with functional language dropdown
+- Centralized and responsive language selector
+- Fine-tuning of padding, spacing and alignment
 
 #### **4. SEO and Accessibility**
 - Search engine optimized meta tags
@@ -168,10 +197,12 @@ This project was developed in collaboration with artificial intelligence, demons
 ### 💡 Insights on AI in Development
 
 - **Acceleration**: ~70% reduction in development time
-- **Quality**: More consistent code following standards
-- **Learning**: Exposure to modern patterns and practices
+- **Quality**: More consistent code following modern standards
+- **Learning**: Exposure to modern CSS patterns and practices
 - **Productivity**: Focus on business logic vs. boilerplate
-- **Innovation**: Rapid experimentation with new technologies
+- **Innovation**: Rapid experimentation with Tailwind CSS and optimizations
+- **Debugging**: Quick resolution of responsiveness issues
+- **Refactoring**: Automated code cleaning with functionality preservation
 
 ### 🔮 Future of AI-Developer Collaboration
 
