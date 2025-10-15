@@ -31,13 +31,14 @@ const translations: Translations = {
 
     // Projects
     'projects.title': 'Projetos',
-    'projects.startup.title': 'Startup - API para site e-commerce',
-    'projects.startup.description': 'Implementei autenticação e controle de estoque usando o framework Ruby on Rails. Resolvendo issues no GitHub abrindo Pull Requests. Aplicação conteinerizada com Docker. Banco de dados em postgreSQL. Cobertura de testes: 100%',
-    'projects.startup.period': '07/2025 ~ 08/2025',
+    'projects.referral.title': 'Sistema de Indicação',
+    'projects.referral.description': 'Aplicação web que implementa um sistema de pontos por indicação. Usuários podem se cadastrar, fazer login e ganhar pontos ao convidar amigos. Backend modular com NestJS, TypeORM e autenticação JWT. Frontend React + Vite com Context API, lazy loading e validação sem libs externas. CSS puro, design system próprio e glassmorphism. Banco SQLite para rápida configuração local e versionamento simples.',
+    'projects.api-ecommerce.title': 'API para site e-commerce',
+    'projects.api-ecommerce.description': 'Implementei autenticação e controle de estoque usando o framework Ruby on Rails. Aplicação conteinerizada com Docker. Banco de dados em postgreSQL. Cobertura de testes: 100%',
+    'projects.mobile.title': 'App Mobile — Academia (Kotlin)',
+    'projects.mobile.description': 'Aplicativo mobile em Kotlin – app para academia universitária com cadastro de treinos e notificações. Login e cadastro de usuários com Firebase Authentication.',
     'projects.game.title': 'Jogo 2D — Godot',
     'projects.game.description': 'Jogo 2D em Godot Engine – foco em narrativa interativa. Programei um ESP-32 para servir como controle para o jogo.',
-    'projects.mobile.title': 'App Mobile — Academia (Kotlin)',
-    'projects.mobile.description': 'Aplicativo mobile em Kotlin – app para academia universitária com cadastro de treinos e notificações.',
 
     // Education
     'education.title': 'Formação',
@@ -81,13 +82,14 @@ const translations: Translations = {
 
     // Projects
     'projects.title': 'Projects',
-    'projects.startup.title': 'Startup - E-commerce API',
-    'projects.startup.description': 'Implemented authentication and inventory control using Ruby on Rails framework. Solving GitHub issues by opening Pull Requests. Containerized application with Docker. PostgreSQL database. Test coverage: 100%',
-    'projects.startup.period': '07/2025 ~ 08/2025',
+    'projects.referral.title': 'Referral System',
+    'projects.referral.description': 'Web application implementing a points-based referral system. Users can register, login, and earn points by inviting friends. Modular backend with NestJS, TypeORM and JWT authentication. React + Vite frontend with Context API, lazy loading and validation without external libraries. Pure CSS, custom design system and glassmorphism. SQLite database for quick local setup and simple versioning.',
+    'projects.api-ecommerce.title': 'E-commerce Website API',
+    'projects.api-ecommerce.description': 'Implemented authentication and inventory control using Ruby on Rails framework. Containerized application with Docker. PostgreSQL database. Test coverage: 100%',
+    'projects.mobile.title': 'Mobile App — Gym (Kotlin)',
+    'projects.mobile.description': 'Mobile application in Kotlin – university gym app with workout registration and notifications. Login and user registration with Firebase Authentication.',
     'projects.game.title': '2D Game — Godot',
     'projects.game.description': '2D game in Godot Engine – focused on interactive narrative. Programmed an ESP-32 to serve as a game controller.',
-    'projects.mobile.title': 'Mobile App — Gym (Kotlin)',
-    'projects.mobile.description': 'Mobile application in Kotlin – university gym app with workout registration and notifications.',
 
     // Education
     'education.title': 'Education',

@@ -10,22 +10,27 @@ const Projects: React.FC = () => {
   const projects: Project[] = [
     {
       id: '1',
-      title: t('projects.startup.title'),
-      description: t('projects.startup.description'),
-      period: t('projects.startup.period'),
-      technologies: ['Ruby on Rails', 'Docker', 'PostgreSQL', 'RSpec'],
+      title: t('projects.referral.title'),
+      description: t('projects.referral.description'),
+      technologies: ['NestJS', 'TypeORM', 'JWT', 'React', 'Vite', 'SQLite', 'TypeScript'],
     },
     {
       id: '2',
-      title: t('projects.game.title'),
-      description: t('projects.game.description'),
-      technologies: ['Godot', 'GDScript', 'Game Design', 'ESP-32'],
+      title: t('projects.api-ecommerce.title'),
+      description: t('projects.api-ecommerce.description'),
+      technologies: ['Ruby on Rails', 'Docker', 'PostgreSQL', 'RSpec'],
     },
     {
       id: '3',
       title: t('projects.mobile.title'),
       description: t('projects.mobile.description'),
       technologies: ['Kotlin', 'AndroidStudio', 'Firebase'],
+    },
+    {
+      id: '4',
+      title: t('projects.game.title'),
+      description: t('projects.game.description'),
+      technologies: ['Godot', 'GDScript', 'Game Design', 'ESP-32'],
     },
   ];
 
