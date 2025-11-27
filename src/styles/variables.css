@@ -1,7 +1,7 @@
 /* ===== CSS VARIABLES - DESIGN SYSTEM ===== */
 
 :root {
-  /* Colors */
+  /* Colors - Dark Theme (Default) */
   --bg-primary: #000000;
   --bg-secondary: #0a0a0a;
   --bg-tertiary: #121212;
@@ -19,7 +19,9 @@
   --accent-purple: #a855f7;
   
   /* Glassmorphism */
+  --glass-bg: linear-gradient(135deg, rgba(147, 197, 253, 0.05) 0%, rgba(168, 85, 247, 0.03) 100%);
   --glass-border: rgba(147, 197, 253, 0.15);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
   
   /* Spacing */
   --spacing-xs: 0.25rem;
@@ -52,4 +54,29 @@
   /* Z-index */
   --z-dropdown: 1000;
   --z-sticky: 1020;
+}
+
+/* ===== LIGHT THEME ===== */
+[data-theme="light"] {
+  /* Colors - Light Theme */
+  --bg-primary: #f8fafc;
+  --bg-secondary: #f1f5f9;
+  --bg-tertiary: #e2e8f0;
+  
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-tertiary: #64748b;
+  --text-muted: #94a3b8;
+  
+  /* Accent Colors - Slightly darker for light mode */
+  --accent: #3b82f6;
+  --accent-hover: #2563eb;
+  --accent-dark: #1d4ed8;
+  --accent-neon: #0284c7;
+  --accent-purple: #7c3aed;
+  
+  /* Glassmorphism - Adjusted for light mode */
+  --glass-bg: linear-gradient(135deg, rgba(59, 130, 246, 0.08) 0%, rgba(124, 58, 237, 0.05) 100%);
+  --glass-border: rgba(59, 130, 246, 0.2);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }

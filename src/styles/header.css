@@ -54,7 +54,7 @@ header > div > div > div:last-child {
 
 header nav a {
   position: relative;
-  color: var(--text-secondary);
+  color: rgba(255, 255, 255, 0.85);
   font-weight: 600;
   font-size: clamp(0.875rem, 2vw, 1rem);
   text-transform: uppercase;
@@ -106,7 +106,8 @@ header nav a:hover::after {
 }
 
 header a[href*="github"],
-header a[href*="linkedin"] {
+header a[href*="linkedin"],
+header .theme-toggle-btn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -120,10 +121,12 @@ header a[href*="linkedin"] {
   position: relative;
   overflow: hidden;
   flex-shrink: 0;
+  cursor: pointer;
 }
 
 header a[href*="github"]::before,
-header a[href*="linkedin"]::before {
+header a[href*="linkedin"]::before,
+header .theme-toggle-btn::before {
   content: '';
   position: absolute;
   top: 50%;
@@ -138,7 +141,8 @@ header a[href*="linkedin"]::before {
 }
 
 header a[href*="github"]:hover,
-header a[href*="linkedin"]:hover {
+header a[href*="linkedin"]:hover,
+header .theme-toggle-btn:hover {
   color: var(--bg-primary);
   transform: translateY(-3px) rotate(5deg);
   border-color: var(--accent);
@@ -146,13 +150,15 @@ header a[href*="linkedin"]:hover {
 }
 
 header a[href*="github"]:hover::before,
-header a[href*="linkedin"]:hover::before {
+header a[href*="linkedin"]:hover::before,
+header .theme-toggle-btn:hover::before {
   width: 120px;
   height: 120px;
 }
 
 header a[href*="github"] svg,
-header a[href*="linkedin"] svg {
+header a[href*="linkedin"] svg,
+header .theme-toggle-btn svg {
   width: 24px;
   height: 24px;
   transition: transform var(--transition);
@@ -161,7 +167,8 @@ header a[href*="linkedin"] svg {
 }
 
 header a[href*="github"]:hover svg,
-header a[href*="linkedin"]:hover svg {
+header a[href*="linkedin"]:hover svg,
+header .theme-toggle-btn:hover svg {
   transform: scale(1.1) rotate(-5deg);
 }
 
@@ -287,13 +294,15 @@ header .md\:hidden a[href*="linkedin"] {
   }
   
   header a[href*="github"],
-  header a[href*="linkedin"] {
+  header a[href*="linkedin"],
+  header .theme-toggle-btn {
     width: 36px;
     height: 36px;
   }
   
   header a[href*="github"] svg,
-  header a[href*="linkedin"] svg {
+  header a[href*="linkedin"] svg,
+  header .theme-toggle-btn svg {
     width: 18px;
     height: 18px;
   }
@@ -319,7 +328,8 @@ header .md\:hidden a[href*="linkedin"] {
   }
   
   header .md\:hidden a[href*="github"],
-  header .md\:hidden a[href*="linkedin"] {
+  header .md\:hidden a[href*="linkedin"],
+  header .md\:hidden .theme-toggle-btn {
     width: 42px;
     height: 42px;
     flex-shrink: 0;
@@ -327,7 +337,8 @@ header .md\:hidden a[href*="linkedin"] {
   }
   
   header .md\:hidden a[href*="github"] svg,
-  header .md\:hidden a[href*="linkedin"] svg {
+  header .md\:hidden a[href*="linkedin"] svg,
+  header .md\:hidden .theme-toggle-btn svg {
     width: 26px;
     height: 26px;
   }
@@ -371,13 +382,15 @@ header .md\:hidden a[href*="linkedin"] {
   }
   
   header a[href*="github"],
-  header a[href*="linkedin"] {
+  header a[href*="linkedin"],
+  header .theme-toggle-btn {
     width: 32px;
     height: 32px;
   }
   
   header a[href*="github"] svg,
-  header a[href*="linkedin"] svg {
+  header a[href*="linkedin"] svg,
+  header .theme-toggle-btn svg {
     width: 16px;
     height: 16px;
   }
@@ -399,14 +412,16 @@ header .md\:hidden a[href*="linkedin"] {
   }
   
   header .md\:hidden a[href*="github"],
-  header .md\:hidden a[href*="linkedin"] {
+  header .md\:hidden a[href*="linkedin"],
+  header .md\:hidden .theme-toggle-btn {
     width: 44px;
     height: 44px;
     padding: 0.5rem;
   }
   
   header .md\:hidden a[href*="github"] svg,
-  header .md\:hidden a[href*="linkedin"] svg {
+  header .md\:hidden a[href*="linkedin"] svg,
+  header .md\:hidden .theme-toggle-btn svg {
     width: 28px;
     height: 28px;
   }
@@ -424,4 +439,64 @@ header .md\:hidden a[href*="linkedin"] {
   header .md\:hidden .language-name {
     font-size: 0.65rem;
   }
+}
+
+/* ===== LIGHT THEME HEADER ===== */
+[data-theme="light"] header.fixed {
+  background: rgba(255, 255, 255, 0.9);
+  border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] header.scrolled {
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.15);
+}
+
+[data-theme="light"] header nav a {
+  color: var(--text-secondary);
+}
+
+[data-theme="light"] header nav a:hover {
+  color: var(--accent);
+}
+
+[data-theme="light"] header a[href*="github"],
+[data-theme="light"] header a[href*="linkedin"],
+[data-theme="light"] header .theme-toggle-btn {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.08), rgba(124, 58, 237, 0.05));
+  border: 1px solid rgba(59, 130, 246, 0.25);
+  color: var(--text-secondary);
+}
+
+[data-theme="light"] header a[href*="github"]:hover,
+[data-theme="light"] header a[href*="linkedin"]:hover,
+[data-theme="light"] header .theme-toggle-btn:hover {
+  color: #ffffff;
+  border-color: var(--accent);
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+}
+
+[data-theme="light"] header button[aria-label="Menu"] {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.08), rgba(124, 58, 237, 0.05));
+  border: 1px solid rgba(59, 130, 246, 0.25);
+  color: var(--text-secondary);
+}
+
+[data-theme="light"] header button[aria-label="Menu"]:hover {
+  color: #ffffff;
+  border-color: var(--accent);
+}
+
+[data-theme="light"] header .md\:hidden.py-4 {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.05), rgba(124, 58, 237, 0.03));
+  border-top: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+[data-theme="light"] header .md\:hidden nav a:hover {
+  background: rgba(59, 130, 246, 0.1);
+}
+
+[data-theme="light"] header .md\:hidden .flex.items-center {
+  border-top: 1px solid rgba(59, 130, 246, 0.2);
 }

@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 
-export const useIntersectionObserver = (threshold = 0.1, rootMargin = '0px') => {
-  const ref = useRef<HTMLElement>(null);
+export const useIntersectionObserver = <T extends HTMLElement = HTMLDivElement>(threshold = 0.1, rootMargin = '0px') => {
+  const ref = useRef<T>(null);
 
   useEffect(() => {
     const element = ref.current;

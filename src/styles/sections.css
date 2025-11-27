@@ -287,6 +287,67 @@
   left: 0;
 }
 
+/* Form Feedback Messages */
+.form-error-message,
+.form-success-message {
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-radius: var(--radius);
+  font-weight: 600;
+  text-align: center;
+  animation: fadeInUp 0.3s ease-out;
+}
+
+.form-error-message {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #ef4444;
+}
+
+.form-success-message {
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  color: #10b981;
+}
+
+/* Button Loading State */
+.form-actions .btn.btn-loading {
+  opacity: 0.8;
+  cursor: not-allowed;
+}
+
+.form-actions .btn.btn-loading:hover {
+  transform: none;
+  box-shadow: 0 8px 20px rgba(147, 197, 253, 0.3);
+}
+
+.form-actions .btn.btn-success {
+  background: linear-gradient(135deg, #10b981, #059669);
+}
+
+.form-actions .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+}
+
+/* Animate spin for loading */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+/* Disabled form inputs */
+.contact-form input:disabled,
+.contact-form textarea:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   #formacao h2,
