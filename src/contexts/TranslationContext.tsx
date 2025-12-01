@@ -101,6 +101,7 @@ const translations: Translations = {
     'contact.title': 'Contato',
     'contact.description': 'Quer conversar sobre vagas, projetos ou café virtual? Manda mensagem aqui:',
     'contact.name': 'Nome',
+    'contact.email': 'Seu Email',
     'contact.subject': 'Assunto',
     'contact.message': 'Mensagem',
     'contact.send': 'Enviar por email',
@@ -183,6 +184,8 @@ const translations: Translations = {
     'contactPage.availability.text': 'Estou aberto a novas oportunidades de trabalho, estágios e projetos interessantes. Não hesite em entrar em contato!',
     'contactPage.response.label': 'Tempo de Resposta',
     'contactPage.response.time': 'Geralmente em 24h',
+    'contactPage.emailNotice': 'Use o formulário ao lado para enviar sua mensagem!',
+    'contactPage.emailNotice.title': 'Dica',
   },
   en: {
     // Header
@@ -277,6 +280,7 @@ const translations: Translations = {
     'contact.title': 'Contact',
     'contact.description': 'Want to talk about jobs, projects or virtual coffee? Send a message here:',
     'contact.name': 'Name',
+    'contact.email': 'Your Email',
     'contact.subject': 'Subject',
     'contact.message': 'Message',
     'contact.send': 'Send by email',
@@ -359,6 +363,8 @@ const translations: Translations = {
     'contactPage.availability.text': 'I\'m open to new job opportunities, internships and interesting projects. Don\'t hesitate to reach out!',
     'contactPage.response.label': 'Response Time',
     'contactPage.response.time': 'Usually within 24h',
+    'contactPage.emailNotice': 'Please use the form to send your message!',
+    'contactPage.emailNotice.title': 'Tip',
   },
 };
 

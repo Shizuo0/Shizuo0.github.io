@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from '@dr.pogodin/react-helmet';
 import Layout from './components/Layout';
+import ScrollToTop from './components/ScrollToTop';
 import { HomePage, ProjectsPage, ProjectDetailPage, AboutPage, SkillsPage, ContactPage, NotFoundPage } from './pages';
 import { TranslationProvider } from './contexts/TranslationContext';
 import { ThemeProvider } from './contexts/ThemeContext';
@@ -11,6 +12,7 @@ function App() {
       <ThemeProvider>
         <TranslationProvider>
           <BrowserRouter>
+            <ScrollToTop />
             <Routes>
               <Route path="/" element={<Layout />}>
                 <Route index element={<HomePage />} />

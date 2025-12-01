@@ -17,6 +17,7 @@ export const useContactForm = () => {
   const formRef = useRef<HTMLFormElement>(null);
   const [formData, setFormData] = useState<FormData>({
     name: '',
+    email: '',
     subject: '',
     message: '',
   });
@@ -47,10 +48,18 @@ export const useContactForm = () => {
     }
 
     // Verificar se EmailJS está configurado
+    console.log('EmailJS Debug:', {
+      SERVICE_ID: EMAILJS_SERVICE_ID,
+      TEMPLATE_ID: EMAILJS_TEMPLATE_ID,
+      PUBLIC_KEY: EMAILJS_PUBLIC_KEY,
+    });
+    
     const isEmailJSConfigured = 
       EMAILJS_SERVICE_ID !== 'YOUR_SERVICE_ID' && 
       EMAILJS_TEMPLATE_ID !== 'YOUR_TEMPLATE_ID' && 
       EMAILJS_PUBLIC_KEY !== 'YOUR_PUBLIC_KEY';
+    
+    console.log('isEmailJSConfigured:', isEmailJSConfigured);
 
     if (isEmailJSConfigured && formRef.current) {
       // Usar EmailJS
@@ -65,7 +74,7 @@ export const useContactForm = () => {
         );
         
         setSendStatus('success');
-        setFormData({ name: '', subject: '', message: '' });
+        setFormData({ name: '', email: '', subject: '', message: '' });
         
         setTimeout(() => {
           setSendStatus('idle');

@@ -70,6 +70,20 @@ const Contact: React.FC = () => {
           />
         </label>
 
+        <label htmlFor="email">
+          {t('contact.email') || 'Email'}
+          <input
+            id="email"
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleInputChange}
+            required
+            aria-describedby="email-error"
+            disabled={sendStatus === 'sending'}
+          />
+        </label>
+
         <label htmlFor="subject">
           {t('contact.subject')}
           <input
