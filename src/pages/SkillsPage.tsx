@@ -79,7 +79,7 @@ const SkillsPage: React.FC = () => {
               <div className="skills-list">
                 {category.skills.map((skill) => (
                   <span key={skill} className="skill-tag">
-                    {skill}
+                    <span>{skill}</span>
                   </span>
                 ))}
               </div>

@@ -91,16 +91,19 @@ header nav a::after {
   z-index: -1;
 }
 
-header nav a:hover {
+header nav a:hover,
+header nav a.active {
   color: var(--accent);
   transform: translateY(-2px);
 }
 
-header nav a:hover::before {
+header nav a:hover::before,
+header nav a.active::before {
   width: 100%;
 }
 
-header nav a:hover::after {
+header nav a:hover::after,
+header nav a.active::after {
   width: 120%;
   height: 120%;
 }
@@ -261,7 +264,8 @@ header .md\:hidden nav a {
   text-align: center;
 }
 
-header .md\:hidden nav a:hover {
+header .md\:hidden nav a:hover,
+header .md\:hidden nav a.active {
   background: rgba(147, 197, 253, 0.1);
   transform: scale(1.02);
 }
@@ -493,7 +497,8 @@ header .md\:hidden a[href*="linkedin"] {
   border-top: 1px solid rgba(59, 130, 246, 0.2);
 }
 
-[data-theme="light"] header .md\:hidden nav a:hover {
+[data-theme="light"] header .md\:hidden nav a:hover,
+[data-theme="light"] header .md\:hidden nav a.active {
   background: rgba(59, 130, 246, 0.1);
 }
 

@@ -176,7 +176,7 @@
   font-size: clamp(0.75rem, 1.5vw, 0.875rem);
   font-weight: 600;
   border: 1px solid rgba(147, 197, 253, 0.2);
-  transition: all var(--transition);
+  transition: all var(--transition-spring);
   position: relative;
   overflow: hidden;
   text-transform: uppercase;
@@ -186,24 +186,32 @@
 .tech-tag::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(147, 197, 253, 0.3), transparent);
-  transition: left 0.5s;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: linear-gradient(135deg, var(--accent), var(--accent-purple));
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.5s;
+  z-index: 0;
+}
+
+.tech-tag span {
+  position: relative;
+  z-index: 1;
 }
 
 .tech-tag:hover {
-  transform: translateY(-3px);
-  background: linear-gradient(135deg, var(--accent), var(--accent-purple));
-  color: var(--bg-primary);
+  transform: translateY(-3px) rotate(3deg);
+  color: #000;
   border-color: var(--accent);
-  box-shadow: 0 8px 20px rgba(147, 197, 253, 0.4);
+  box-shadow: 0 6px 20px rgba(147, 197, 253, 0.4);
 }
 
 .tech-tag:hover::before {
-  left: 100%;
+  width: 150px;
+  height: 150px;
 }
 
 /* Responsive */

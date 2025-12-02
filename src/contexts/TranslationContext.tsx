@@ -186,6 +186,22 @@ const translations: Translations = {
     'contactPage.response.time': 'Geralmente em 24h',
     'contactPage.emailNotice': 'Use o formulário ao lado para enviar sua mensagem!',
     'contactPage.emailNotice.title': 'Dica',
+    
+    // GitHub
+    'github.title': 'Estatísticas do GitHub',
+    'github.loading': 'Carregando estatísticas...',
+    'github.repos': 'Repositórios',
+    'github.stars': 'Stars',
+    'github.forks': 'Forks',
+    'github.followers': 'Seguidores',
+    'github.topLanguages': 'Linguagens mais usadas',
+    'github.recentActivity': 'Atividade Recente',
+    
+    // Home Page
+    'home.projects.description': 'Explore meus projetos de desenvolvimento web, mobile e sistemas completos.',
+    'home.skills.description': 'Tecnologias e ferramentas que utilizo no dia a dia do desenvolvimento.',
+    'home.about.description': 'Conheça minha jornada, formação e o que me motiva como desenvolvedor.',
+    'home.contact.description': 'Vamos conversar! Estou disponível para oportunidades e projetos.',
   },
   en: {
     // Header
@@ -365,6 +381,22 @@ const translations: Translations = {
     'contactPage.response.time': 'Usually within 24h',
     'contactPage.emailNotice': 'Please use the form to send your message!',
     'contactPage.emailNotice.title': 'Tip',
+    
+    // GitHub
+    'github.title': 'GitHub Stats',
+    'github.loading': 'Loading stats...',
+    'github.repos': 'Repositories',
+    'github.stars': 'Stars',
+    'github.forks': 'Forks',
+    'github.followers': 'Followers',
+    'github.topLanguages': 'Top Languages',
+    'github.recentActivity': 'Recent Activity',
+    
+    // Home Page
+    'home.projects.description': 'Explore my web development, mobile and complete systems projects.',
+    'home.skills.description': 'Technologies and tools I use in my daily development work.',
+    'home.about.description': 'Learn about my journey, education and what motivates me as a developer.',
+    'home.contact.description': 'Let\'s talk! I\'m available for opportunities and projects.',
   },
 };
 

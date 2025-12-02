@@ -2,19 +2,22 @@ import React, { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
 import { useTranslation } from '../contexts/TranslationContext';
+import { useGitHub } from '../contexts/GitHubContext';
 import SEO from '../components/SEO';
 import { Project } from '../types';
 
 const ProjectsPage: React.FC = () => {
   const ref = useIntersectionObserver();
   const { t } = useTranslation();
+  const { getRepoByName } = useGitHub();
   const [activeFilter, setActiveFilter] = useState<string>('all');
 
-  // Projetos reais do GitHub
-  const projects: Project[] = [
+  // Projetos reais do GitHub com mapeamento para nomes de repos
+  const projectsData: (Project & { repoName?: string })[] = [
     {
       id: 'delivery-system',
       title: 'DeliverySystem',
+      repoName: 'DeliverySystem',
       description: t('projects.delivery.description'),
       technologies: ['JavaScript', 'React', 'Node.js', 'MySQL', 'Express'],
       githubUrl: 'https://github.com/Shizuo0/DeliverySystem',
@@ -23,6 +26,7 @@ const ProjectsPage: React.FC = () => {
     {
       id: 'referral-system',
       title: 'ReferralSystem',
+      repoName: 'ReferralSystem',
       description: t('projects.referral.description'),
       technologies: ['TypeScript', 'React', 'NestJS', 'SQLite', 'AI', 'JWT'],
       githubUrl: 'https://github.com/Shizuo0/ReferralSystem',
@@ -31,6 +35,7 @@ const ProjectsPage: React.FC = () => {
     {
       id: 'academic-system',
       title: 'AcademicSystem',
+      repoName: 'AcademicSystem',
       description: t('projects.academic.description'),
       technologies: ['Java', 'MySQL', 'JDBC', 'Swing'],
       githubUrl: 'https://github.com/Shizuo0/AcademicSystem',
@@ -39,6 +44,7 @@ const ProjectsPage: React.FC = () => {
     {
       id: 'gym-management',
       title: 'GymManagement',
+      repoName: 'GymManagement',
       description: t('projects.gym.description'),
       technologies: ['Java', 'Spring Boot', 'JavaSwing', 'MySQL'],
       githubUrl: 'https://github.com/Shizuo0/GymManagement',
@@ -47,12 +53,25 @@ const ProjectsPage: React.FC = () => {
     {
       id: 'portfolio',
       title: 'Portfolio',
+      repoName: 'Shizuo0.github.io',
       description: t('projects.portfolio.description'),
       technologies: ['React', 'TypeScript', 'Vite', 'Tailwind CSS'],
       githubUrl: 'https://github.com/Shizuo0/Shizuo0.github.io',
       category: 'frontend',
     },
   ];
+
+  // Enriquecer projetos com dados do GitHub
+  const projects = projectsData.map(project => {
+    const repoData = project.repoName ? getRepoByName(project.repoName) : undefined;
+    return {
+      ...project,
+      stars: repoData?.stargazers_count || 0,
+      forks: repoData?.forks_count || 0,
+      updatedAt: repoData?.pushed_at || null,
+      language: repoData?.language || null,
+    };
+  });
 
   // Filtrar projetos
   const filteredProjects = useMemo(() => {
@@ -69,6 +88,16 @@ const ProjectsPage: React.FC = () => {
     { key: 'frontend', label: 'Frontend' },
     { key: 'backend', label: 'Backend' },
   ];
+
+  const formatDate = (dateString: string | null) => {
+    if (!dateString) return '';
+    const date = new Date(dateString);
+    return date.toLocaleDateString('pt-BR', { 
+      day: '2-digit', 
+      month: 'short', 
+      year: 'numeric' 
+    });
+  };
 
   return (
     <>
@@ -89,7 +118,7 @@ const ProjectsPage: React.FC = () => {
               className={`filter-btn ${activeFilter === filter.key ? 'active' : ''}`}
               onClick={() => setActiveFilter(filter.key)}
             >
-              {filter.label}
+              <span>{filter.label}</span>
             </button>
           ))}
         </div>
@@ -150,6 +179,35 @@ const ProjectsPage: React.FC = () => {
               <h3>{project.title}</h3>
               <p>{project.description}</p>
               
+              {/* GitHub Stats */}
+              <div className="project-github-stats">
+                <span className="project-stat">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                  </svg>
+                  {project.stars}
+                </span>
+                <span className="project-stat">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <circle cx="12" cy="18" r="3"/>
+                    <circle cx="6" cy="6" r="3"/>
+                    <circle cx="18" cy="6" r="3"/>
+                    <path d="M18 9v2c0 .6-.4 1-1 1H7c-.6 0-1-.4-1-1V9"/>
+                    <path d="M12 12v3"/>
+                  </svg>
+                  {project.forks}
+                </span>
+                {project.updatedAt && (
+                  <span className="project-stat project-date">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <circle cx="12" cy="12" r="10"/>
+                      <polyline points="12 6 12 12 16 14"/>
+                    </svg>
+                    {formatDate(project.updatedAt)}
+                  </span>
+                )}
+              </div>
+              
               <div className="project-technologies">
                 {project.technologies.map((tech) => (
                   <span 
@@ -157,7 +215,7 @@ const ProjectsPage: React.FC = () => {
                     className="tech-tag"
                     onClick={() => setActiveFilter(tech)}
                   >
-                    {tech}
+                    <span>{tech}</span>
                   </span>
                 ))}
               </div>

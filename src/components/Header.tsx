@@ -22,31 +22,31 @@ const Header: React.FC = () => {
           <nav className="hidden md:flex items-center space-x-8">
             <Link 
               to="/"
-              className={`transition-colors duration-300 font-medium ${isActive('/') ? 'text-accent' : 'text-gray-300 hover:text-accent'}`}
+              className={`nav-link ${isActive('/') ? 'active' : ''}`}
             >
               {t('nav.home')}
             </Link>
             <Link 
               to="/sobre"
-              className={`transition-colors duration-300 font-medium ${isActive('/sobre') ? 'text-accent' : 'text-gray-300 hover:text-accent'}`}
+              className={`nav-link ${isActive('/sobre') ? 'active' : ''}`}
             >
               {t('nav.about')}
             </Link>
             <Link 
               to="/habilidades"
-              className={`transition-colors duration-300 font-medium ${isActive('/habilidades') ? 'text-accent' : 'text-gray-300 hover:text-accent'}`}
+              className={`nav-link ${isActive('/habilidades') ? 'active' : ''}`}
             >
               {t('nav.skills')}
             </Link>
             <Link 
               to="/projetos"
-              className={`transition-colors duration-300 font-medium ${isActive('/projetos') ? 'text-accent' : 'text-gray-300 hover:text-accent'}`}
+              className={`nav-link ${isActive('/projetos') ? 'active' : ''}`}
             >
               {t('nav.projects')}
             </Link>
             <Link 
               to="/contato"
-              className={`transition-colors duration-300 font-medium ${isActive('/contato') ? 'text-accent' : 'text-gray-300 hover:text-accent'}`}
+              className={`nav-link ${isActive('/contato') ? 'active' : ''}`}
             >
               {t('nav.contact')}
             </Link>
@@ -101,35 +101,35 @@ const Header: React.FC = () => {
               <Link 
                 to="/"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className={`py-2 text-center ${isActive('/') ? 'text-accent' : 'text-text hover:text-accent'}`}
+                className={`nav-link py-2 text-center ${isActive('/') ? 'active' : ''}`}
               >
                 {t('nav.home')}
               </Link>
               <Link 
                 to="/sobre"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className={`py-2 text-center ${isActive('/sobre') ? 'text-accent' : 'text-text hover:text-accent'}`}
+                className={`nav-link py-2 text-center ${isActive('/sobre') ? 'active' : ''}`}
               >
                 {t('nav.about')}
               </Link>
               <Link 
                 to="/habilidades"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className={`py-2 text-center ${isActive('/habilidades') ? 'text-accent' : 'text-text hover:text-accent'}`}
+                className={`nav-link py-2 text-center ${isActive('/habilidades') ? 'active' : ''}`}
               >
                 {t('nav.skills')}
               </Link>
               <Link 
                 to="/projetos"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className={`py-2 text-center ${isActive('/projetos') ? 'text-accent' : 'text-text hover:text-accent'}`}
+                className={`nav-link py-2 text-center ${isActive('/projetos') ? 'active' : ''}`}
               >
                 {t('nav.projects')}
               </Link>
               <Link 
                 to="/contato"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className={`py-2 text-center ${isActive('/contato') ? 'text-accent' : 'text-text hover:text-accent'}`}
+                className={`nav-link py-2 text-center ${isActive('/contato') ? 'active' : ''}`}
               >
                 {t('nav.contact')}
               </Link>

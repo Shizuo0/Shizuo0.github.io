@@ -1,11 +1,14 @@
 import React from 'react';
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
 import { useTranslation } from '../contexts/TranslationContext';
+import { useGitHub } from '../contexts/GitHubContext';
+import GitHubStats from '../components/GitHubStats';
 import SEO from '../components/SEO';
 
 const AboutPage: React.FC = () => {
   const ref = useIntersectionObserver();
   const { t } = useTranslation();
+  const { user, stats } = useGitHub();
 
   const timeline = [
     {
@@ -56,7 +59,7 @@ const AboutPage: React.FC = () => {
           <div className="bio-card">
             <div className="bio-avatar">
               <img
-                src="https://avatars.githubusercontent.com/u/209567232?v=4"
+                src={user?.avatar_url || "https://avatars.githubusercontent.com/u/209567232?v=4"}
                 alt="Avatar de Paulo Shizuo Vasconcelos Tatibana"
                 className="avatar-image"
                 style={{ width: 144, height: 144, borderRadius: '50%' }}
@@ -65,14 +68,15 @@ const AboutPage: React.FC = () => {
             <div className="bio-content">
               <h2>Paulo Shizuo Vasconcelos Tatibana</h2>
               <p className="bio-role">{t('about.role')}</p>
-              <p className="bio-description">{t('about.bio')}</p>
+              <p className="bio-description">{user?.bio || t('about.bio')}</p>
+              <p className="bio-description-secondary">{t('hero.description')}</p>
               <div className="bio-stats">
                 <div className="stat">
-                  <span className="stat-number">5+</span>
+                  <span className="stat-number">{stats?.totalRepos || '5'}+</span>
                   <span className="stat-label">{t('about.stats.projects')}</span>
                 </div>
                 <div className="stat">
-                  <span className="stat-number">10+</span>
+                  <span className="stat-number">{stats?.topLanguages.length || '10'}+</span>
                   <span className="stat-label">{t('about.stats.technologies')}</span>
                 </div>
                 <div className="stat">
@@ -82,6 +86,12 @@ const AboutPage: React.FC = () => {
               </div>
             </div>
           </div>
+        </div>
+
+        {/* GitHub Stats Section */}
+        <div className="about-section">
+          <h2>{t('github.title') || 'GitHub Stats'}</h2>
+          <GitHubStats variant="full" showLanguages showActivity />
         </div>
 
         {/* Timeline Section */}

@@ -30,7 +30,7 @@ const Skills: React.FC = () => {
             className={`skill skill-${skill.category} animate-zoomIn delay-${(index % 5) * 100}`}
             data-category={skill.category}
           >
-            {skill.name}
+            <span>{skill.name}</span>
           </div>
         ))}
       </div>

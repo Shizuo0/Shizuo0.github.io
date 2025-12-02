@@ -52,7 +52,7 @@ const Projects: React.FC = () => {
                   key={tech} 
                   className={`tech-tag animate-fadeInLeft delay-${techIndex * 100}`}
                 >
-                  {tech}
+                  <span>{tech}</span>
                 </span>
               ))}
             </div>
