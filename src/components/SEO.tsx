@@ -11,7 +11,8 @@ interface SEOProps {
 
 const defaultMeta = {
   title: 'Paulo Shizuo - Desenvolvedor Full Stack',
-  description: 'Portfolio de Paulo Shizuo Vasconcelos Tatibana - Desenvolvedor Full Stack especializado em React, TypeScript, Node.js e mais.',
+  description: 'Portfolio de Paulo Shizuo Vasconcelos Tatibana - ' +
+    'Desenvolvedor Full Stack especializado em React, TypeScript, Node.js e mais.',
   keywords: 'desenvolvedor, full stack, react, typescript, nodejs, portfolio, paulo shizuo',
   image: '/og-image.png',
   url: 'https://shizuo0.github.io',

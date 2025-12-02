@@ -61,60 +61,60 @@ const SkillsPage: React.FC = () => {
         description="Conheça as tecnologias e habilidades de Paulo Shizuo - TypeScript, React, Node.js e mais."
       />
       <section className="skills-page">
-      <div className="container reveal" ref={ref}>
-        <h1>{t('skillsPage.title')}</h1>
-        <p className="page-subtitle">{t('skillsPage.subtitle')}</p>
+        <div className="container reveal" ref={ref}>
+          <h1>{t('skillsPage.title')}</h1>
+          <p className="page-subtitle">{t('skillsPage.subtitle')}</p>
 
-        {/* Skills Categories Grid */}
-        <div className="skills-categories-grid">
-          {skillCategories.map((category, index) => (
-            <div 
-              key={index} 
-              className="skill-category-card"
-            >
-              <div className="skill-category-header">
-                <span className="skill-category-icon">{category.icon}</span>
-                <h2 className="skill-category-title">{category.title}</h2>
+          {/* Skills Categories Grid */}
+          <div className="skills-categories-grid">
+            {skillCategories.map((category, index) => (
+              <div 
+                key={index} 
+                className="skill-category-card"
+              >
+                <div className="skill-category-header">
+                  <span className="skill-category-icon">{category.icon}</span>
+                  <h2 className="skill-category-title">{category.title}</h2>
+                </div>
+                <div className="skills-list">
+                  {category.skills.map((skill) => (
+                    <span key={skill} className="skill-tag">
+                      <span>{skill}</span>
+                    </span>
+                  ))}
+                </div>
               </div>
-              <div className="skills-list">
-                {category.skills.map((skill) => (
-                  <span key={skill} className="skill-tag">
-                    <span>{skill}</span>
-                  </span>
-                ))}
-              </div>
+            ))}
+          </div>
+
+          {/* Stats Section */}
+          <div className="skills-stats-section">
+            <h2>{t('skillsPage.stats')}</h2>
+            <div className="stats-grid">
+              {stats.map((stat, index) => (
+                <div key={index} className="stat-card">
+                  <span className="stat-icon">{stat.icon}</span>
+                  <span className="stat-number">{stat.number}</span>
+                  <span className="stat-label">{stat.label}</span>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
+          </div>
 
-        {/* Stats Section */}
-        <div className="skills-stats-section">
-          <h2>{t('skillsPage.stats')}</h2>
-          <div className="stats-grid">
-            {stats.map((stat, index) => (
-              <div key={index} className="stat-card">
-                <span className="stat-icon">{stat.icon}</span>
-                <span className="stat-number">{stat.number}</span>
-                <span className="stat-label">{stat.label}</span>
-              </div>
-            ))}
+          {/* Learning Section */}
+          <div className="skills-learning-section">
+            <h2>{t('skillsPage.learning')}</h2>
+            <div className="learning-grid">
+              {learningItems.map((item, index) => (
+                <div key={index} className="learning-item">
+                  <span className="learning-icon">{item.icon}</span>
+                  <span className="learning-name">{item.name}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-
-        {/* Learning Section */}
-        <div className="skills-learning-section">
-          <h2>{t('skillsPage.learning')}</h2>
-          <div className="learning-grid">
-            {learningItems.map((item, index) => (
-              <div key={index} className="learning-item">
-                <span className="learning-icon">{item.icon}</span>
-                <span className="learning-name">{item.name}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
+      </section>
     </>
   );
 };

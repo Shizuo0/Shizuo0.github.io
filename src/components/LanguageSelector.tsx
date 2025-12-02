@@ -12,14 +12,14 @@ const LanguageSelector: React.FC = () => {
       code: 'en',
       name: 'English',
       flag: '🇺🇸',
-      label: 'United States'
+      label: 'United States',
     },
     {
       code: 'pt',
       name: 'Português',
       flag: '🇧🇷',
-      label: 'Brasil'
-    }
+      label: 'Brasil',
+    },
   ];
 
   const currentLanguage = languages.find(lang => lang.code === language);

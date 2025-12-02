@@ -48,18 +48,10 @@ export const useContactForm = () => {
     }
 
     // Verificar se EmailJS está configurado
-    console.log('EmailJS Debug:', {
-      SERVICE_ID: EMAILJS_SERVICE_ID,
-      TEMPLATE_ID: EMAILJS_TEMPLATE_ID,
-      PUBLIC_KEY: EMAILJS_PUBLIC_KEY,
-    });
-    
     const isEmailJSConfigured = 
       EMAILJS_SERVICE_ID !== 'YOUR_SERVICE_ID' && 
       EMAILJS_TEMPLATE_ID !== 'YOUR_TEMPLATE_ID' && 
       EMAILJS_PUBLIC_KEY !== 'YOUR_PUBLIC_KEY';
-    
-    console.log('isEmailJSConfigured:', isEmailJSConfigured);
 
     if (isEmailJSConfigured && formRef.current) {
       // Usar EmailJS
@@ -70,7 +62,7 @@ export const useContactForm = () => {
           EMAILJS_SERVICE_ID,
           EMAILJS_TEMPLATE_ID,
           formRef.current,
-          EMAILJS_PUBLIC_KEY
+          EMAILJS_PUBLIC_KEY,
         );
         
         setSendStatus('success');
@@ -79,8 +71,7 @@ export const useContactForm = () => {
         setTimeout(() => {
           setSendStatus('idle');
         }, 3000);
-      } catch (error) {
-        console.error('EmailJS error:', error);
+      } catch {
         setSendStatus('error');
         setErrorMessage('Erro ao enviar. Tente novamente ou use o email direto.');
         

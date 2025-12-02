@@ -12,6 +12,8 @@ Portfólio desenvolvido com React, TypeScript e Vite, seguindo as melhores prát
 - **CSS Modules** - Estilos modulares e reutilizáveis
 - **ESLint** - Linting de código
 - **Intersection Observer API** - Animações de scroll
+- **EmailJS** - Serviço de envio de emails para formulário de contato
+- **GitHub API** - Estatísticas e dados do GitHub em tempo real
 
 ## ✨ Características
 
@@ -23,6 +25,8 @@ Portfólio desenvolvido com React, TypeScript e Vite, seguindo as melhores prát
 - 🎭 **Animações Suaves** - Transições elegantes com Intersection Observer
 - 🌐 **Multilíngue** - Suporte para Português e Inglês
 - 🎨 **Sistema de Design** - Variáveis CSS centralizadas e tema consistente
+- 📧 **Formulário de Contato Funcional** - Envio de emails via integração EmailJS
+- 📊 **Estatísticas GitHub em Tempo Real** - Dados da API do GitHub com cache
 
 ## 🛠️ Scripts Disponíveis
 
@@ -43,6 +47,33 @@ npm run preview
 npm run lint
 ```
 
+## 🔐 Variáveis de Ambiente
+
+Crie um arquivo `.env` na raiz do projeto com as seguintes variáveis:
+
+```env
+# Configuração EmailJS (para formulário de contato)
+VITE_EMAILJS_SERVICE_ID=seu_service_id
+VITE_EMAILJS_TEMPLATE_ID=seu_template_id
+VITE_EMAILJS_PUBLIC_KEY=sua_public_key
+```
+
+### Configuração do EmailJS
+
+1. Crie uma conta no [EmailJS](https://www.emailjs.com/)
+2. Crie um serviço de email (Gmail, Outlook, etc.)
+3. Crie um template de email com as variáveis: `{{from_name}}`, `{{from_email}}`, `{{subject}}`, `{{message}}`
+4. Copie o Service ID, Template ID e Public Key para seu arquivo `.env`
+
+### GitHub API
+
+A integração com a API do GitHub funciona sem autenticação para dados públicos. Inclui:
+- Informações do perfil do usuário
+- Lista de repositórios públicos
+- Estatísticas de stars e forks
+- Linguagens de programação mais usadas
+- Cache de 5 minutos para evitar rate limiting
+
 ## 📁 Estrutura do Projeto
 
 ```
@@ -57,7 +88,9 @@ src/
 │   ├── Footer.tsx      # Rodapé com links sociais
 │   └── LanguageSelector.tsx # Seletor de idioma
 ├── contexts/           # Context API do React
-│   └── TranslationContext.tsx # Gerenciamento de idiomas
+│   ├── TranslationContext.tsx # Gerenciamento de idiomas
+│   ├── ThemeContext.tsx       # Gerenciamento de tema claro/escuro
+│   └── GitHubContext.tsx      # Gerenciamento de dados da API GitHub
 ├── hooks/              # Hooks personalizados
 │   ├── useIntersectionObserver.ts
 │   └── useContactForm.ts
@@ -96,12 +129,14 @@ src/
 - **CSS Modular** - 9 arquivos organizados por funcionalidade (~2000 linhas otimizadas)
 - **Design System** - Variáveis CSS centralizadas para cores, espaçamentos e tipografia
 - **Intersection Observer** - Animações de scroll automáticas e performáticas
-- **Formulário de Contato** - Integração com cliente de email (mailto)
+- **Integração EmailJS** - Formulário de contato funcional com envio de email sem backend
+- **Integração GitHub API** - Busca de dados em tempo real com cache de 5 minutos
 - **Responsive Design** - Mobile-first com breakpoints em 768px e 480px
 - **TypeScript Strict** - Tipagem forte para melhor manutenibilidade
 - **Glassmorphism** - Efeitos de vidro com backdrop-filter
 - **Animações CSS** - Gradientes animados e transições suaves
 - **Multilíngue** - Sistema de tradução com Context API
+- **Variáveis de Ambiente** - Configuração segura com variáveis env do Vite
 
 ## 🚀 Deploy
 
@@ -120,10 +155,6 @@ npm run build
 npm run build
 # Configure o GitHub Actions para deploy automático
 ```
-
-## 📝 Licença
-
-Este projeto é de uso pessoal e educacional.
 
 ## 🤖 Colaboração com IA
 
@@ -207,6 +238,16 @@ Este projeto foi desenvolvido em colaboração com inteligência artificial, dem
 ### 🔮 Futuro da Colaboração IA-Desenvolvedor
 
 Esta experiência demonstra o potencial da colaboração entre desenvolvedores e IA para criar software de alta qualidade de forma mais eficiente, mantendo o controle humano sobre decisões arquiteturais e criativas.
+
+---
+
+## 📜 Licença
+
+Este projeto está protegido sob uma **Licença Restritiva Personalizada**.
+
+⚠️ Este é um portfólio pessoal e **NÃO** pode ser copiado, redistribuído, modificado ou usado comercialmente sem permissão explícita.
+
+👉 [Ver licença completa](./LICENSE)
 
 ---
 

@@ -5,7 +5,7 @@ interface ThemeToggleIconProps {
   isDark: boolean;
 }
 
-const ThemeToggleIcon: React.FC<ThemeToggleIconProps> = ({ className = "w-6 h-6", isDark }) => {
+const ThemeToggleIcon: React.FC<ThemeToggleIconProps> = ({ className = 'w-6 h-6', isDark }) => {
   if (isDark) {
     // Sun icon (to switch to light mode)
     return (

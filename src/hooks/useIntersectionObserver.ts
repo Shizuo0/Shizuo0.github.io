@@ -1,6 +1,9 @@
 import { useEffect, useRef } from 'react';
 
-export const useIntersectionObserver = <T extends HTMLElement = HTMLDivElement>(threshold = 0.1, rootMargin = '0px') => {
+export const useIntersectionObserver = <T extends HTMLElement = HTMLDivElement>(
+  threshold = 0.1,
+  rootMargin = '0px',
+) => {
   const ref = useRef<T>(null);
 
   useEffect(() => {
@@ -26,7 +29,7 @@ export const useIntersectionObserver = <T extends HTMLElement = HTMLDivElement>(
       },
       { 
         threshold,
-        rootMargin 
+        rootMargin, 
       },
     );
 

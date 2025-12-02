@@ -24,14 +24,3 @@ export interface Skill {
   name: string;
   category: 'frontend' | 'backend' | 'mobile' | 'database' | 'tools';
 }
-
-export interface Education {
-  degree: string;
-  institution: string;
-  period: string;
-}
-
-export interface ContactInfo {
-  email: string;
-  github: string;
-}

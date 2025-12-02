@@ -8,7 +8,7 @@ import SEO from '../components/SEO';
 
 const HomePage: React.FC = () => {
   const { t } = useTranslation();
-  const { user, stats, loading } = useGitHub();
+  const { user, stats } = useGitHub();
   const ref = useIntersectionObserver();
 
   const sectionCards = [
@@ -54,7 +54,7 @@ const HomePage: React.FC = () => {
           {/* Hero Section */}
           <div className="intro-hero">
             <img 
-              src={user?.avatar_url || "https://avatars.githubusercontent.com/u/209567232?v=4"}
+              src={user?.avatar_url || 'https://avatars.githubusercontent.com/u/209567232?v=4'}
               alt="Paulo Shizuo Vasconcelos Tatibana"
               className="intro-avatar"
             />

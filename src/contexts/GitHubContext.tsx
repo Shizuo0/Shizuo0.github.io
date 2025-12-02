@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import React, { createContext, useContext, useState, useEffect, useCallback, ReactNode } from 'react';
 
 // Tipos para dados do GitHub
 export interface GitHubUser {
@@ -102,7 +102,7 @@ export const GitHubProvider: React.FC<{ children: ReactNode }> = ({ children }) 
     };
   };
 
-  const fetchGitHubData = async () => {
+  const fetchGitHubData = useCallback(async () => {
     // Verificar cache
     const cached = localStorage.getItem(CACHE_KEY);
     if (cached) {
@@ -133,7 +133,7 @@ export const GitHubProvider: React.FC<{ children: ReactNode }> = ({ children }) 
 
       // Fetch repos
       const reposResponse = await fetch(
-        `https://api.github.com/users/${GITHUB_USERNAME}/repos?per_page=100&sort=updated`
+        `https://api.github.com/users/${GITHUB_USERNAME}/repos?per_page=100&sort=updated`,
       );
       if (!reposResponse.ok) {
         throw new Error('Falha ao carregar repositórios');
@@ -156,23 +156,22 @@ export const GitHubProvider: React.FC<{ children: ReactNode }> = ({ children }) 
       localStorage.setItem(CACHE_KEY, JSON.stringify(cacheData));
 
     } catch (err) {
-      console.error('GitHub API Error:', err);
       setError(err instanceof Error ? err.message : 'Erro ao carregar dados do GitHub');
     } finally {
       setLoading(false);
     }
-  };
+  }, []);
 
   const getRepoByName = (name: string): GitHubRepo | undefined => {
     return repos.find(repo => 
       repo.name.toLowerCase() === name.toLowerCase() ||
-      repo.name.toLowerCase().replace(/-/g, '') === name.toLowerCase().replace(/-/g, '')
+      repo.name.toLowerCase().replace(/-/g, '') === name.toLowerCase().replace(/-/g, ''),
     );
   };
 
   useEffect(() => {
     fetchGitHubData();
-  }, []);
+  }, [fetchGitHubData]);
 
   return (
     <GitHubContext.Provider value={{ user, repos, stats, loading, error, getRepoByName }}>

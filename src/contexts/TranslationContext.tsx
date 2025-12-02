@@ -63,7 +63,7 @@ const translations: Translations = {
     
     // Project: Academic System
     'projects.academic.description': 'Sistema acadêmico em Java para gerenciamento de alunos, professores, disciplinas e notas.',
-    'projects.academic.longDescription': 'Sistema completo de gerenciamento acadêmico desenvolvido em Java com interface Swing. Permite cadastro de alunos, professores, disciplinas, turmas e lançamento de notas. Utiliza MySQL como banco de dados e segue o padrão MVC.',
+    'projects.academic.longDescription': 'Sistema completo de gerenciamento acadêmico desenvolvido em Java com interface via console. Permite cadastro de alunos, professores, disciplinas, turmas e lançamento de notas. Utiliza MySQL como banco de dados e segue o padrão MVC.',
     'projects.academic.feature1': 'Cadastro completo de alunos e professores',
     'projects.academic.feature2': 'Gerenciamento de disciplinas e turmas',
     'projects.academic.feature3': 'Sistema de lançamento de notas',
@@ -258,7 +258,7 @@ const translations: Translations = {
     
     // Project: Academic System
     'projects.academic.description': 'Academic system in Java for managing students, teachers, subjects and grades.',
-    'projects.academic.longDescription': 'Complete academic management system developed in Java with Swing interface. Allows registration of students, teachers, subjects, classes and grade entry. Uses MySQL as database and follows MVC pattern.',
+    'projects.academic.longDescription': 'Complete academic management system developed in Java with console interface. Allows registration of students, teachers, subjects, classes and grade entry. Uses MySQL as database and follows MVC pattern.',
     'projects.academic.feature1': 'Complete student and teacher registration',
     'projects.academic.feature2': 'Subject and class management',
     'projects.academic.feature3': 'Grade entry system',

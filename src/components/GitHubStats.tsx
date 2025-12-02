@@ -11,7 +11,7 @@ interface GitHubStatsProps {
 const GitHubStats: React.FC<GitHubStatsProps> = ({ 
   variant = 'full', 
   showLanguages = true,
-  showActivity = false 
+  showActivity = false, 
 }) => {
   const { stats, user, loading, error } = useGitHub();
   const { t } = useTranslation();

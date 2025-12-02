@@ -12,6 +12,8 @@ Portfolio developed with React, TypeScript and Vite, following web development b
 - **CSS Modules** - Modular and reusable styles
 - **ESLint** - Code linting
 - **Intersection Observer API** - Scroll animations
+- **EmailJS** - Email sending service for contact form
+- **GitHub API** - Real-time GitHub statistics and data
 
 ## ✨ Features
 
@@ -23,6 +25,8 @@ Portfolio developed with React, TypeScript and Vite, following web development b
 - 🎭 **Smooth Animations** - Elegant transitions with Intersection Observer
 - 🌐 **Multilingual** - Support for Portuguese and English
 - 🎨 **Design System** - Centralized CSS variables and consistent theme
+- 📧 **Functional Contact Form** - Email sending via EmailJS integration
+- 📊 **Live GitHub Stats** - Real-time statistics from GitHub API with caching
 
 ## 🛠️ Available Scripts
 
@@ -43,6 +47,33 @@ npm run preview
 npm run lint
 ```
 
+## 🔐 Environment Variables
+
+Create a `.env` file in the project root with the following variables:
+
+```env
+# EmailJS Configuration (for contact form)
+VITE_EMAILJS_SERVICE_ID=your_service_id
+VITE_EMAILJS_TEMPLATE_ID=your_template_id
+VITE_EMAILJS_PUBLIC_KEY=your_public_key
+```
+
+### EmailJS Setup
+
+1. Create an account at [EmailJS](https://www.emailjs.com/)
+2. Create an email service (Gmail, Outlook, etc.)
+3. Create an email template with variables: `{{from_name}}`, `{{from_email}}`, `{{subject}}`, `{{message}}`
+4. Copy the Service ID, Template ID, and Public Key to your `.env` file
+
+### GitHub API
+
+The GitHub API integration works without authentication for public data. It includes:
+- User profile information
+- Public repositories list
+- Stars and forks statistics
+- Top programming languages
+- 5-minute cache to avoid rate limiting
+
 ## 📁 Project Structure
 
 ```
@@ -57,7 +88,9 @@ src/
 │   ├── Footer.tsx      # Footer with social links
 │   └── LanguageSelector.tsx # Language selector
 ├── contexts/           # React Context API
-│   └── TranslationContext.tsx # Language management
+│   ├── TranslationContext.tsx # Language management
+│   ├── ThemeContext.tsx       # Dark/Light theme management
+│   └── GitHubContext.tsx      # GitHub API data management
 ├── hooks/              # Custom hooks
 │   ├── useIntersectionObserver.ts
 │   └── useContactForm.ts
@@ -96,12 +129,14 @@ src/
 - **Modular CSS** - 9 files organized by functionality (~2000 optimized lines)
 - **Design System** - Centralized CSS variables for colors, spacing and typography
 - **Intersection Observer** - Automatic and performant scroll animations
-- **Contact Form** - Email client integration (mailto)
+- **EmailJS Integration** - Functional contact form with email sending without backend
+- **GitHub API Integration** - Real-time data fetching with 5-minute cache
 - **Responsive Design** - Mobile-first with breakpoints at 768px and 480px
 - **TypeScript Strict** - Strong typing for better maintainability
 - **Glassmorphism** - Glass effects with backdrop-filter
 - **CSS Animations** - Animated gradients and smooth transitions
 - **Multilingual** - Translation system with Context API
+- **Environment Variables** - Secure configuration with Vite env variables
 
 ## 🚀 Deploy
 
@@ -120,10 +155,6 @@ npm run build
 npm run build
 # Configure GitHub Actions for automatic deployment
 ```
-
-## 📝 License
-
-This project is for personal and educational use.
 
 ## 🤖 AI Collaboration
 
@@ -207,6 +238,16 @@ This project was developed in collaboration with artificial intelligence, demons
 ### 🔮 Future of AI-Developer Collaboration
 
 This experience demonstrates the potential of collaboration between developers and AI to create high-quality software more efficiently, while maintaining human control over architectural and creative decisions.
+
+---
+
+## 📜 License
+
+This project is protected under a **Custom Restrictive License**. 
+
+⚠️ This is a personal portfolio and may **NOT** be copied, redistributed, modified, or used commercially without explicit permission.
+
+👉 [View full license](./LICENSE)
 
 ---
 

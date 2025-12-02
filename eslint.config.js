@@ -45,9 +45,18 @@ export default [
       quotes: ['error', 'single', { avoidEscape: true }],
       semi: ['error', 'always'],
       indent: ['error', 2, { SwitchCase: 1 }],
-      'max-len': ['warn', { code: 120, ignoreUrls: true }],
+      'max-len': ['warn', { 
+        code: 120, 
+        ignoreUrls: true, 
+        ignoreStrings: true, 
+        ignoreTemplateLiterals: true,
+        ignorePattern: '^\\s*d=',
+      }],
       'react-hooks/exhaustive-deps': 'warn',
-      'react-refresh/only-export-components': 'warn',
+      'react-refresh/only-export-components': [
+        'warn',
+        { allowConstantExport: true, allowExportNames: ['useGitHub', 'useTheme', 'useTranslation'] },
+      ],
     },
   },
   {
@@ -94,10 +103,19 @@ export default [
       quotes: ['error', 'single', { avoidEscape: true }],
       semi: ['error', 'always'],
       indent: ['error', 2, { SwitchCase: 1 }],
-      'max-len': ['warn', { code: 120, ignoreUrls: true }],
+      'max-len': ['warn', { 
+        code: 120, 
+        ignoreUrls: true, 
+        ignoreStrings: true, 
+        ignoreTemplateLiterals: true,
+        ignorePattern: '^\\s*d=',
+      }],
       'react-hooks/rules-of-hooks': 'error',
       'react-hooks/exhaustive-deps': 'warn',
-      'react-refresh/only-export-components': 'warn',
+      'react-refresh/only-export-components': [
+        'warn',
+        { allowConstantExport: true, allowExportNames: ['useGitHub', 'useTheme', 'useTranslation'] },
+      ],
     },
   },
 ];
